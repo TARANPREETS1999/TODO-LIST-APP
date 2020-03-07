@@ -1,0 +1,22 @@
+<div class="col">
+<form class="form">
+        <div class="Input-group mb-3">
+            <Input type="text" class="form-control" placeholder="Add task..." aria-label="" aria-describedby="basic-addon1" ng-model="task.task">
+                <div class="Input-group-prepend">
+                    <Input type="submit" value="Submit" class="btn btn-success"> 
+                </div>
+        </div>
+    </form>
+<div class= "panel panel-default" ng-init="getTask()"> 
+    <div>ng-repeat="entry in tasks.data>
+        <ul class="list-group">
+            <li class="list-group-item">{{ entry.task }}
+                <div>
+                    <button type="button" class="btn btn-secondary" style="float:left;">EDIT</button>
+                    <button type="button" class="btn btn-danger" style="float:left;" ng-click="removeTask(entry.id)">Delete</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
